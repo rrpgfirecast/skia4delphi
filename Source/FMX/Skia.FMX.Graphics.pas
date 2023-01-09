@@ -1161,7 +1161,8 @@ begin
       end;
     end;
     Result := TGrBitmapHandle(ABitmapHandle).FTexture;
-  end;
+  end else
+    Result := inherited GetCache(ABitmapHandle);
 end;
 
 class procedure TGrCanvas.Initialize;
